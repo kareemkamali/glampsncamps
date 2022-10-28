@@ -1,0 +1,35 @@
+.categories-items{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.categories-item{
+   width: 50%;
+    min-height: 100vh;
+    position: relative;
+  
+}
+
+.categories-item h3{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.categories-item:hover h3{
+    color: var(--mainColor);
+    transition-delay: .3s;
+    transition-duration: .2s;
+}
+
+.categories-item img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:760px) {
+    .categories-item{
+        width: 100% !important;
+    }
+    
+}

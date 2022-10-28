@@ -1,0 +1,14 @@
+.button-large{
+    width: 300px;
+    height: 55px;
+    letter-spacing: 5px;
+    text-align: center;
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 28px;
+    cursor: pointer;
+}

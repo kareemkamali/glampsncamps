@@ -1,0 +1,220 @@
+.trip{
+    position: relative;
+    background-image: url(../../assets/images/banner2.jpg);
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.trip::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: .5;
+    z-index: 1;
+}
+
+.trip-bar img{
+    position: relative;
+    top: -60px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.trip-title{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    z-index: 2;
+                }
+.trip-title h2{
+font-size: 70px;
+                }
+.trip-title span {
+  margin: 0 10px;
+  padding: 0;
+  font-size: 70px;
+  color: var(--blackColor);
+
+}
+.trip-items{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  
+}
+.trip-item{
+    z-index: 3;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+.trip-item-img{
+width: 100%;
+height: 300px;
+border-radius: 20px;
+position: relative;
+}
+.trip-item-img-desc{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: .3s ;
+    transition: all .2s;
+}
+.trip-item:hover .trip-item-img-desc{
+    opacity: 1;
+    visibility: visible;
+}
+.trip-item-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.trip-item:hover h3{
+    transition-delay: .3s;
+    color: var(--mainColor);
+}
+
+
+.image-effect::before{
+    background-color: rgb(255, 191, 29,.4);
+}
+
+
+
+.trip-location-items{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+z-index: 8;
+align-items: center;
+}
+
+.trip-location-item1{
+    grid-column: 1/3;
+    justify-items: end;
+    z-index: 8;
+    display: grid;
+    margin-top: 100px;
+}
+
+.trip-location-item1-c{
+    width: 90%;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: whitesmoke;
+
+}
+.trip-location-item2{
+    z-index: 8;
+    margin-left: 30px;
+    max-width: 450px;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  
+}
+
+.trip-location-item2> h3{
+    color:var(--mainColor);
+    text-transform: none;
+}
+
+
+
+
+
+.date {
+    z-index: 99;
+    position: relative;
+}
+.date > h2 {
+    color: var(--mainColor);
+    padding-bottom: 300px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:980px) {
+    .trip-title {
+        top: -50px;
+    }
+    .trip-title h2{ 
+        font-size: 40px;
+    }
+    .trip-title span {
+        font-size: 40px;
+    }
+
+    
+
+}
+@media screen and (max-width:690px) {
+
+    .trip-title h2{
+        font-size: 40px;
+                        }
+        .trip-title span {
+            font-size: 40px;
+        }
+        .trip-title{
+            top: -20px;
+            transform: translateX(-50%);
+        
+        }
+        .trip-item h3 {
+            font-size: 18px;
+        }
+
+        .trip-item {
+           width: 40%;
+        }
+
+        .trip-location-item1-c{
+            width: 80%;
+            height: 200px;
+            border-radius: 10px;
+        
+        }
+}
+@media screen and (max-width:500px) {
+
+    .trip-title h2{
+font-size: 20px;
+                }
+.trip-title span {
+    font-size: 20px;
+}
+.trip-title{
+    top: -20px;
+    transform: translateX(-50%);
+
+}
+
+
+}
+
+
+

@@ -1,0 +1,148 @@
+/* Trip Bar */
+.trip-bar {
+    position: relative;
+}
+.trip-bar img{
+    position: relative;
+    top: -100px;
+    width: 100%;
+    vertical-align: middle;
+    z-index: 2;
+}
+.trip-title{
+    position: absolute;
+    top: 0% !important;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    z-index: 2;
+                }
+.trip-title > h2{
+font-size: 60px !important;
+}
+.trip-title span {
+  margin: 0 0px;
+  padding: 0;
+  font-size: 60px !important;
+  color: var(--blackColor);
+}
+
+@media (max-width:1200px) {
+    .trip-title > h2{
+        font-size: 40px !important;
+        }
+        .trip-title span {
+            font-size: 40px !important;
+          }
+          
+
+}
+@media (max-width:900px) {
+    .trip-title > h2{
+        font-size: 20px !important;
+        }
+        .trip-title span {
+            font-size: 20px !important;
+          }
+          .trip-title{
+            
+            top: -0% !important;
+           
+                        }
+}
+
+
+@media (max-width:700px) {
+    .trip-title > h2{
+        font-size: 20px !important;
+        }
+        .trip-title span {
+            font-size: 20px !important;
+          }
+          .trip-title{
+            
+            top: -20% !important;
+           
+                        }
+                        .trip-bar img{
+                    
+                            top: -80px !important;}
+}
+/* End Trip */
+.activities {
+    position: relative;
+    background-image: url(../../assets/images/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0 0 0 ;
+    margin-top: -180px;
+    height: 800px;
+}
+.checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px , 1fr));
+    padding-top: 200px;
+    gap: 150px;
+    /* background-color: red; */
+    justify-items: center;
+}
+@media (max-width:960px) {
+    .checkboxes {
+        gap: 0;
+    }
+}
+.checkboxes label {
+    display: inline-block;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    flex: 50%;
+}
+label input[type="checkbox"] {
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    top: 10px;
+    left: 0px;
+    position: absolute;
+    cursor: pointer;
+z-index: 2;
+}
+label span.checkmarker {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    background-color: transparent;
+    border: 3px solid white;
+}
+
+span.checkmarker::after {
+    left: 10px;
+    top: -20px;
+    width: 22px;
+    height: 40px;
+    border: solid #fbaa1a;
+    border-width: 0 7px 7px 0;
+    -webkit-transform: rotate(38deg);
+    -ms-transform: rotate(38deg);
+    transform: rotate(38deg);
+    content: "";
+    position: absolute;
+    display: none;
+}
+label input[type="checkbox"]:checked~span.checkmarker::after {
+    display: block;
+}
